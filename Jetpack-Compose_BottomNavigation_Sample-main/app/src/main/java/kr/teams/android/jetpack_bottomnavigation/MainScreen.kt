@@ -97,17 +97,5 @@ fun Root(navController: NavHostController) {
         homeNavGraph()
         searchNavGraph()
         profileNavGraph()
-
-        /*
-        composable(route = BottomNavItem.Home.route) {
-            HomeScreen()
-        }
-        composable(route = BottomNavItem.Search.route) {
-            SearchScreen()
-        }
-        composable(route = BottomNavItem.Profile.route) {
-            ProfileScreen()
-        }
-        */
     }
 }
