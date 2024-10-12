@@ -18,9 +18,9 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navOptions
 import kotlinx.serialization.Serializable
-import kr.teams.android.jetpack_bottomnavigation.feature.home.HomeScreen
-import kr.teams.android.jetpack_bottomnavigation.feature.profile.ProfileScreen
-import kr.teams.android.jetpack_bottomnavigation.feature.search.SearchScreen
+import kr.teams.android.jetpack_bottomnavigation.feature.home.homeNavGraph
+import kr.teams.android.jetpack_bottomnavigation.feature.profile.profileNavGraph
+import kr.teams.android.jetpack_bottomnavigation.feature.search.searchNavGraph
 import kr.teams.android.jetpack_bottomnavigation.feature.tutorial.navigationTutorialNavGraph
 
 @Serializable
@@ -94,8 +94,11 @@ fun Root(navController: NavHostController) {
         navController = navController,
         startDestination = BottomNavItem.Home.route
     ) {
-        //homeNavGraph()
+        homeNavGraph()
+        searchNavGraph()
+        profileNavGraph()
 
+        /*
         composable(route = BottomNavItem.Home.route) {
             HomeScreen()
         }
@@ -105,5 +108,6 @@ fun Root(navController: NavHostController) {
         composable(route = BottomNavItem.Profile.route) {
             ProfileScreen()
         }
+        */
     }
 }

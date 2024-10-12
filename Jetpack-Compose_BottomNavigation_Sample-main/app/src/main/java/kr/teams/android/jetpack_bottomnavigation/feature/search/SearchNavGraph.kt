@@ -3,6 +3,7 @@ package kr.teams.android.jetpack_bottomnavigation.feature.search
 import androidx.navigation.NavGraphBuilder
 import androidx.navigation.compose.composable
 import kotlinx.serialization.Serializable
+import kr.teams.android.jetpack_bottomnavigation.BottomNavItem
 import kr.teams.android.jetpack_bottomnavigation.feature.profile.ProfileScreen
 
 
@@ -10,7 +11,7 @@ import kr.teams.android.jetpack_bottomnavigation.feature.profile.ProfileScreen
 data object SearchRoute
 
 fun NavGraphBuilder.searchNavGraph() {
-    composable<SearchRoute> {
+    composable(BottomNavItem.Search.route) {
         ProfileScreen()
     }
 }

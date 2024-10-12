@@ -8,6 +8,7 @@ import androidx.navigation.NavOptions
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import kotlinx.serialization.Serializable
+import kr.teams.android.jetpack_bottomnavigation.BottomNavItem
 
 @Serializable
 data object HomeRoute
@@ -17,7 +18,7 @@ fun NavController.navigateToHomeScreen(navOptions: NavOptions) {
 }
 
 fun NavGraphBuilder.homeNavGraph() {
-    composable<HomeRoute> {
+    composable(BottomNavItem.Home.route) {
         HomeScreen()
     }
 }
